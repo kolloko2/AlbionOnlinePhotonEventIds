@@ -1,515 +1,615 @@
 // Decompiled with JetBrains decompiler
-// Type: Albion.Common.Photon.OperationCodes
+// Type: Albion.Common.Photon.EventCodes
 // Assembly: Albion.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 8AC39FFD-09B0-419F-92C5-8B65076F2715
-// Assembly location: C:\Users\Kol\Desktop\IL2CPP\DummyDll\Albion.Common.dll
+// MVID: 097C4965-7B0E-477D-BFF7-5938F91B89EA
+// Assembly location: C:\Users\Kol\Desktop\Tools\il2cpp\DummyDll\Albion.Common.dll
 
 using Il2CppDummyDll;
 
+#nullable disable
 namespace Albion.Common.Photon
 {
-  [Token(Token = "0x200104F")]
-  public enum OperationCodes : short
+  [Token(Token = "0x2001054")]
+  public enum EventCodes : short
   {
-    [Token(Token = "0x4006386")] Unused,
-    [Token(Token = "0x4006387")] Ping,
-    [Token(Token = "0x4006388")] Join,
-    [Token(Token = "0x4006389")] VersionedOperation,
-    [Token(Token = "0x400638A")] CreateAccount,
-    [Token(Token = "0x400638B")] Login,
-    [Token(Token = "0x400638C")] CreateGuestAccount,
-    [Token(Token = "0x400638D")] SendCrashLog,
-    [Token(Token = "0x400638E")] SendTraceRoute,
-    [Token(Token = "0x400638F")] SendVfxStats,
-    [Token(Token = "0x4006390")] SendGamePingInfo,
-    [Token(Token = "0x4006391")] CreateCharacter,
-    [Token(Token = "0x4006392")] DeleteCharacter,
-    [Token(Token = "0x4006393")] SelectCharacter,
-    [Token(Token = "0x4006394")] AcceptPopups,
-    [Token(Token = "0x4006395")] RedeemKeycode,
-    [Token(Token = "0x4006396")] GetGameServerByCluster,
-    [Token(Token = "0x4006397")] GetShopPurchaseUrl,
-    [Token(Token = "0x4006398")] GetReferralSeasonDetails,
-    [Token(Token = "0x4006399")] GetReferralLink,
-    [Token(Token = "0x400639A")] GetShopTilesForCategory,
-    [Token(Token = "0x400639B")] Move,
-    [Token(Token = "0x400639C")] AttackStart,
-    [Token(Token = "0x400639D")] CastStart,
-    [Token(Token = "0x400639E")] CastCancel,
-    [Token(Token = "0x400639F")] TerminateToggleSpell,
-    [Token(Token = "0x40063A0")] ChannelingCancel,
-    [Token(Token = "0x40063A1")] AttackBuildingStart,
-    [Token(Token = "0x40063A2")] InventoryDestroyItem,
-    [Token(Token = "0x40063A3")] InventoryMoveItem,
-    [Token(Token = "0x40063A4")] InventoryRecoverItem,
-    [Token(Token = "0x40063A5")] InventoryRecoverAllItems,
-    [Token(Token = "0x40063A6")] InventorySplitStack,
-    [Token(Token = "0x40063A7")] InventorySplitStackInto,
-    [Token(Token = "0x40063A8")] GetClusterData,
-    [Token(Token = "0x40063A9")] ChangeCluster,
-    [Token(Token = "0x40063AA")] ConsoleCommand,
-    [Token(Token = "0x40063AB")] ChatMessage,
-    [Token(Token = "0x40063AC")] ReportClientError,
-    [Token(Token = "0x40063AD")] RegisterToObject,
-    [Token(Token = "0x40063AE")] UnRegisterFromObject,
-    [Token(Token = "0x40063AF")] CraftBuildingChangeSettings,
-    [Token(Token = "0x40063B0")] CraftBuildingTakeMoney,
-    [Token(Token = "0x40063B1")] RepairBuildingChangeSettings,
-    [Token(Token = "0x40063B2")] RepairBuildingTakeMoney,
-    [Token(Token = "0x40063B3")] ActionBuildingChangeSettings,
-    [Token(Token = "0x40063B4")] HarvestStart,
-    [Token(Token = "0x40063B5")] HarvestCancel,
-    [Token(Token = "0x40063B6")] TakeSilver,
-    [Token(Token = "0x40063B7")] ActionOnBuildingStart,
-    [Token(Token = "0x40063B8")] ActionOnBuildingCancel,
-    [Token(Token = "0x40063B9")] InstallResourceStart,
-    [Token(Token = "0x40063BA")] InstallResourceCancel,
-    [Token(Token = "0x40063BB")] InstallSilver,
-    [Token(Token = "0x40063BC")] BuildingFillNutrition,
-    [Token(Token = "0x40063BD")] BuildingChangeRenovationState,
-    [Token(Token = "0x40063BE")] BuildingBuySkin,
-    [Token(Token = "0x40063BF")] BuildingClaim,
-    [Token(Token = "0x40063C0")] BuildingGiveup,
-    [Token(Token = "0x40063C1")] BuildingNutritionSilverStorageDeposit,
-    [Token(Token = "0x40063C2")] BuildingNutritionSilverStorageWithdraw,
-    [Token(Token = "0x40063C3")] BuildingNutritionSilverRewardSet,
-    [Token(Token = "0x40063C4")] ConstructionSiteCreate,
-    [Token(Token = "0x40063C5")] PlaceableObjectPlace,
-    [Token(Token = "0x40063C6")] PlaceableObjectPlaceCancel,
-    [Token(Token = "0x40063C7")] PlaceableObjectPickup,
-    [Token(Token = "0x40063C8")] FurnitureObjectUse,
-    [Token(Token = "0x40063C9")] FarmableHarvest,
-    [Token(Token = "0x40063CA")] FarmableFinishGrownItem,
-    [Token(Token = "0x40063CB")] FarmableDestroy,
-    [Token(Token = "0x40063CC")] FarmableGetProduct,
-    [Token(Token = "0x40063CD")] FarmableFill,
-    [Token(Token = "0x40063CE")] TearDownConstructionSite,
-    [Token(Token = "0x40063CF")] AuctionCreateOffer,
-    [Token(Token = "0x40063D0")] AuctionCreateRequest,
-    [Token(Token = "0x40063D1")] AuctionGetOffers,
-    [Token(Token = "0x40063D2")] AuctionGetRequests,
-    [Token(Token = "0x40063D3")] AuctionBuyOffer,
-    [Token(Token = "0x40063D4")] AuctionAbortAuction,
-    [Token(Token = "0x40063D5")] AuctionModifyAuction,
-    [Token(Token = "0x40063D6")] AuctionAbortOffer,
-    [Token(Token = "0x40063D7")] AuctionAbortRequest,
-    [Token(Token = "0x40063D8")] AuctionSellRequest,
-    [Token(Token = "0x40063D9")] AuctionGetFinishedAuctions,
-    [Token(Token = "0x40063DA")] AuctionGetFinishedAuctionsCount,
-    [Token(Token = "0x40063DB")] AuctionFetchAuction,
-    [Token(Token = "0x40063DC")] AuctionGetMyOpenOffers,
-    [Token(Token = "0x40063DD")] AuctionGetMyOpenRequests,
-    [Token(Token = "0x40063DE")] AuctionGetMyOpenAuctions,
-    [Token(Token = "0x40063DF")] AuctionGetItemAverageStats,
-    [Token(Token = "0x40063E0")] AuctionGetItemAverageValue,
-    [Token(Token = "0x40063E1")] ContainerOpen,
-    [Token(Token = "0x40063E2")] ContainerClose,
-    [Token(Token = "0x40063E3")] ContainerManageSubContainer,
-    [Token(Token = "0x40063E4")] Respawn,
-    [Token(Token = "0x40063E5")] Suicide,
-    [Token(Token = "0x40063E6")] JoinGuild,
-    [Token(Token = "0x40063E7")] LeaveGuild,
-    [Token(Token = "0x40063E8")] CreateGuild,
-    [Token(Token = "0x40063E9")] InviteToGuild,
-    [Token(Token = "0x40063EA")] DeclineGuildInvitation,
-    [Token(Token = "0x40063EB")] KickFromGuild,
-    [Token(Token = "0x40063EC")] InstantJoinGuild,
-    [Token(Token = "0x40063ED")] DuellingChallengePlayer,
-    [Token(Token = "0x40063EE")] DuellingAcceptChallenge,
-    [Token(Token = "0x40063EF")] DuellingDenyChallenge,
-    [Token(Token = "0x40063F0")] ChangeClusterTax,
-    [Token(Token = "0x40063F1")] ClaimTerritory,
-    [Token(Token = "0x40063F2")] GiveUpTerritory,
-    [Token(Token = "0x40063F3")] ChangeTerritoryAccessRights,
-    [Token(Token = "0x40063F4")] GetMonolithInfo,
-    [Token(Token = "0x40063F5")] GetClaimInfo,
-    [Token(Token = "0x40063F6")] GetAttackInfo,
-    [Token(Token = "0x40063F7")] GetTerritorySeasonPoints,
-    [Token(Token = "0x40063F8")] GetAttackSchedule,
-    [Token(Token = "0x40063F9")] GetMatches,
-    [Token(Token = "0x40063FA")] GetMatchDetails,
-    [Token(Token = "0x40063FB")] JoinMatch,
-    [Token(Token = "0x40063FC")] LeaveMatch,
-    [Token(Token = "0x40063FD")] GetClusterInstanceInfoForStaticCluster,
-    [Token(Token = "0x40063FE")] ChangeChatSettings,
-    [Token(Token = "0x40063FF")] LogoutStart,
-    [Token(Token = "0x4006400")] LogoutCancel,
-    [Token(Token = "0x4006401")] ClaimOrbStart,
-    [Token(Token = "0x4006402")] ClaimOrbCancel,
-    [Token(Token = "0x4006403")] MatchLootChestOpeningStart,
-    [Token(Token = "0x4006404")] MatchLootChestOpeningCancel,
-    [Token(Token = "0x4006405")] DepositToGuildAccount,
-    [Token(Token = "0x4006406")] WithdrawalFromAccount,
-    [Token(Token = "0x4006407")] ChangeGuildPayUpkeepFlag,
-    [Token(Token = "0x4006408")] ChangeGuildTax,
-    [Token(Token = "0x4006409")] GetMyTerritories,
-    [Token(Token = "0x400640A")] MorganaCommand,
-    [Token(Token = "0x400640B")] GetServerInfo,
-    [Token(Token = "0x400640C")] SubscribeToCluster,
-    [Token(Token = "0x400640D")] AnswerMercenaryInvitation,
-    [Token(Token = "0x400640E")] GetCharacterEquipment,
-    [Token(Token = "0x400640F")] GetCharacterSteamAchievements,
-    [Token(Token = "0x4006410")] GetCharacterStats,
-    [Token(Token = "0x4006411")] GetKillHistoryDetails,
-    [Token(Token = "0x4006412")] LearnMasteryLevel,
-    [Token(Token = "0x4006413")] ReSpecAchievement,
-    [Token(Token = "0x4006414")] ChangeAvatar,
-    [Token(Token = "0x4006415")] GetRankings,
-    [Token(Token = "0x4006416")] GetRank,
-    [Token(Token = "0x4006417")] GetGvgSeasonRankings,
-    [Token(Token = "0x4006418")] GetGvgSeasonRank,
-    [Token(Token = "0x4006419")] GetGvgSeasonHistoryRankings,
-    [Token(Token = "0x400641A")] GetGvgSeasonGuildMemberHistory,
-    [Token(Token = "0x400641B")] KickFromGvGMatch,
-    [Token(Token = "0x400641C")] GetCrystalLeagueDailySeasonPoints,
-    [Token(Token = "0x400641D")] GetChestLogs,
-    [Token(Token = "0x400641E")] GetAccessRightLogs,
-    [Token(Token = "0x400641F")] GetGuildAccountLogs,
-    [Token(Token = "0x4006420")] GetGuildAccountLogsLargeAmount,
-    [Token(Token = "0x4006421")] InviteToPlayerTrade,
-    [Token(Token = "0x4006422")] PlayerTradeCancel,
-    [Token(Token = "0x4006423")] PlayerTradeInvitationAccept,
-    [Token(Token = "0x4006424")] PlayerTradeAddItem,
-    [Token(Token = "0x4006425")] PlayerTradeRemoveItem,
-    [Token(Token = "0x4006426")] PlayerTradeAcceptTrade,
-    [Token(Token = "0x4006427")] PlayerTradeSetSilverOrGold,
-    [Token(Token = "0x4006428")] SendMiniMapPing,
-    [Token(Token = "0x4006429")] Stuck,
-    [Token(Token = "0x400642A")] BuyRealEstate,
-    [Token(Token = "0x400642B")] ClaimRealEstate,
-    [Token(Token = "0x400642C")] GiveUpRealEstate,
-    [Token(Token = "0x400642D")] ChangeRealEstateOutline,
-    [Token(Token = "0x400642E")] GetMailInfos,
-    [Token(Token = "0x400642F")] GetMailCount,
-    [Token(Token = "0x4006430")] ReadMail,
-    [Token(Token = "0x4006431")] SendNewMail,
-    [Token(Token = "0x4006432")] DeleteMail,
-    [Token(Token = "0x4006433")] MarkMailUnread,
-    [Token(Token = "0x4006434")] ClaimAttachmentFromMail,
-    [Token(Token = "0x4006435")] ApplyToGuild,
-    [Token(Token = "0x4006436")] AnswerGuildApplication,
-    [Token(Token = "0x4006437")] RequestGuildFinderFilteredList,
-    [Token(Token = "0x4006438")] UpdateGuildRecruitmentInfo,
-    [Token(Token = "0x4006439")] RequestGuildRecruitmentInfo,
-    [Token(Token = "0x400643A")] RequestGuildFinderNameSearch,
-    [Token(Token = "0x400643B")] RequestGuildFinderRecommendedList,
-    [Token(Token = "0x400643C")] RegisterChatPeer,
-    [Token(Token = "0x400643D")] SendChatMessage,
-    [Token(Token = "0x400643E")] SendModeratorMessage,
-    [Token(Token = "0x400643F")] JoinChatChannel,
-    [Token(Token = "0x4006440")] LeaveChatChannel,
-    [Token(Token = "0x4006441")] SendWhisperMessage,
-    [Token(Token = "0x4006442")] Say,
-    [Token(Token = "0x4006443")] PlayEmote,
-    [Token(Token = "0x4006444")] StopEmote,
-    [Token(Token = "0x4006445")] GetClusterMapInfo,
-    [Token(Token = "0x4006446")] AccessRightsChangeSettings,
-    [Token(Token = "0x4006447")] Mount,
-    [Token(Token = "0x4006448")] MountCancel,
-    [Token(Token = "0x4006449")] BuyJourney,
-    [Token(Token = "0x400644A")] SetSaleStatusForEstate,
-    [Token(Token = "0x400644B")] ResolveGuildOrPlayerName,
-    [Token(Token = "0x400644C")] GetRespawnInfos,
-    [Token(Token = "0x400644D")] MakeHome,
-    [Token(Token = "0x400644E")] LeaveHome,
-    [Token(Token = "0x400644F")] ResurrectionReply,
-    [Token(Token = "0x4006450")] AllianceCreate,
-    [Token(Token = "0x4006451")] AllianceDisband,
-    [Token(Token = "0x4006452")] AllianceGetMemberInfos,
-    [Token(Token = "0x4006453")] AllianceInvite,
-    [Token(Token = "0x4006454")] AllianceAnswerInvitation,
-    [Token(Token = "0x4006455")] AllianceCancelInvitation,
-    [Token(Token = "0x4006456")] AllianceKickGuild,
-    [Token(Token = "0x4006457")] AllianceLeave,
-    [Token(Token = "0x4006458")] AllianceChangeGoldPaymentFlag,
-    [Token(Token = "0x4006459")] AllianceGetDetailInfo,
-    [Token(Token = "0x400645A")] GetIslandInfos,
-    [Token(Token = "0x400645B")] BuyMyIsland,
-    [Token(Token = "0x400645C")] BuyGuildIsland,
-    [Token(Token = "0x400645D")] UpgradeMyIsland,
-    [Token(Token = "0x400645E")] UpgradeGuildIsland,
-    [Token(Token = "0x400645F")] TerritoryFillNutrition,
-    [Token(Token = "0x4006460")] TeleportBack,
-    [Token(Token = "0x4006461")] PartyInvitePlayer,
-    [Token(Token = "0x4006462")] PartyRequestJoin,
-    [Token(Token = "0x4006463")] PartyAnswerInvitation,
-    [Token(Token = "0x4006464")] PartyAnswerJoinRequest,
-    [Token(Token = "0x4006465")] PartyLeave,
-    [Token(Token = "0x4006466")] PartyKickPlayer,
-    [Token(Token = "0x4006467")] PartyMakeLeader,
-    [Token(Token = "0x4006468")] PartyChangeLootSetting,
-    [Token(Token = "0x4006469")] PartyMarkObject,
-    [Token(Token = "0x400646A")] PartySetRole,
-    [Token(Token = "0x400646B")] SetGuildCodex,
-    [Token(Token = "0x400646C")] ExitEnterStart,
-    [Token(Token = "0x400646D")] ExitEnterCancel,
-    [Token(Token = "0x400646E")] QuestGiverRequest,
-    [Token(Token = "0x400646F")] GoldMarketGetBuyOffer,
-    [Token(Token = "0x4006470")] GoldMarketGetBuyOfferFromSilver,
-    [Token(Token = "0x4006471")] GoldMarketGetSellOffer,
-    [Token(Token = "0x4006472")] GoldMarketGetSellOfferFromSilver,
-    [Token(Token = "0x4006473")] GoldMarketBuyGold,
-    [Token(Token = "0x4006474")] GoldMarketSellGold,
-    [Token(Token = "0x4006475")] GoldMarketCreateSellOrder,
-    [Token(Token = "0x4006476")] GoldMarketCreateBuyOrder,
-    [Token(Token = "0x4006477")] GoldMarketGetInfos,
-    [Token(Token = "0x4006478")] GoldMarketCancelOrder,
-    [Token(Token = "0x4006479")] GoldMarketGetAverageInfo,
-    [Token(Token = "0x400647A")] TreasureChestUsingStart,
-    [Token(Token = "0x400647B")] TreasureChestUsingCancel,
-    [Token(Token = "0x400647C")] UseLootChest,
-    [Token(Token = "0x400647D")] UseShrine,
-    [Token(Token = "0x400647E")] UseHellgateShrine,
-    [Token(Token = "0x400647F")] GetSiegeBannerInfo,
-    [Token(Token = "0x4006480")] LaborerStartJob,
-    [Token(Token = "0x4006481")] LaborerTakeJobLoot,
-    [Token(Token = "0x4006482")] LaborerDismiss,
-    [Token(Token = "0x4006483")] LaborerMove,
-    [Token(Token = "0x4006484")] LaborerBuyItem,
-    [Token(Token = "0x4006485")] LaborerUpgrade,
-    [Token(Token = "0x4006486")] BuyPremium,
-    [Token(Token = "0x4006487")] RealEstateGetAuctionData,
-    [Token(Token = "0x4006488")] RealEstateBidOnAuction,
-    [Token(Token = "0x4006489")] FriendInvite,
-    [Token(Token = "0x400648A")] FriendAnswerInvitation,
-    [Token(Token = "0x400648B")] FriendCancelnvitation,
-    [Token(Token = "0x400648C")] FriendRemove,
-    [Token(Token = "0x400648D")] InventoryStack,
-    [Token(Token = "0x400648E")] InventoryReorder,
-    [Token(Token = "0x400648F")] InventoryDropAll,
-    [Token(Token = "0x4006490")] InventoryAddToStacks,
-    [Token(Token = "0x4006491")] EquipmentItemChangeSpell,
-    [Token(Token = "0x4006492")] ExpeditionRegister,
-    [Token(Token = "0x4006493")] ExpeditionRegisterCancel,
-    [Token(Token = "0x4006494")] JoinExpedition,
-    [Token(Token = "0x4006495")] DeclineExpeditionInvitation,
-    [Token(Token = "0x4006496")] VoteStart,
-    [Token(Token = "0x4006497")] VoteDoVote,
-    [Token(Token = "0x4006498")] RatingDoRate,
-    [Token(Token = "0x4006499")] EnteringExpeditionStart,
-    [Token(Token = "0x400649A")] EnteringExpeditionCancel,
-    [Token(Token = "0x400649B")] ActivateExpeditionCheckPoint,
-    [Token(Token = "0x400649C")] ArenaRegister,
-    [Token(Token = "0x400649D")] ArenaAddInvite,
-    [Token(Token = "0x400649E")] ArenaRegisterCancel,
-    [Token(Token = "0x400649F")] ArenaLeave,
-    [Token(Token = "0x40064A0")] JoinArenaMatch,
-    [Token(Token = "0x40064A1")] DeclineArenaInvitation,
-    [Token(Token = "0x40064A2")] EnteringArenaStart,
-    [Token(Token = "0x40064A3")] EnteringArenaCancel,
-    [Token(Token = "0x40064A4")] ArenaCustomMatch,
-    [Token(Token = "0x40064A5")] UpdateCharacterStatement,
-    [Token(Token = "0x40064A6")] BoostFarmable,
-    [Token(Token = "0x40064A7")] GetStrikeHistory,
-    [Token(Token = "0x40064A8")] UseFunction,
-    [Token(Token = "0x40064A9")] UsePortalEntrance,
-    [Token(Token = "0x40064AA")] ResetPortalBinding,
-    [Token(Token = "0x40064AB")] QueryPortalBinding,
-    [Token(Token = "0x40064AC")] ClaimPaymentTransaction,
-    [Token(Token = "0x40064AD")] ChangeUseFlag,
-    [Token(Token = "0x40064AE")] ClientPerformanceStats,
-    [Token(Token = "0x40064AF")] ExtendedHardwareStats,
-    [Token(Token = "0x40064B0")] ClientLowMemoryWarning,
-    [Token(Token = "0x40064B1")] TerritoryClaimStart,
-    [Token(Token = "0x40064B2")] TerritoryClaimCancel,
-    [Token(Token = "0x40064B3")] DeliverCarriableObjectStart,
-    [Token(Token = "0x40064B4")] DeliverCarriableObjectCancel,
-    [Token(Token = "0x40064B5")] TerritoryUpgradeWithPowerCrystal,
-    [Token(Token = "0x40064B6")] RequestAppStoreProducts,
-    [Token(Token = "0x40064B7")] VerifyProductPurchase,
-    [Token(Token = "0x40064B8")] QueryGuildPlayerStats,
-    [Token(Token = "0x40064B9")] QueryAllianceGuildStats,
-    [Token(Token = "0x40064BA")] TrackAchievements,
-    [Token(Token = "0x40064BB")] SetAchievementsAutoLearn,
-    [Token(Token = "0x40064BC")] DepositItemToGuildCurrency,
-    [Token(Token = "0x40064BD")] WithdrawalItemFromGuildCurrency,
-    [Token(Token = "0x40064BE")] AuctionSellSpecificItemRequest,
-    [Token(Token = "0x40064BF")] FishingStart,
-    [Token(Token = "0x40064C0")] FishingCasting,
-    [Token(Token = "0x40064C1")] FishingCast,
-    [Token(Token = "0x40064C2")] FishingCatch,
-    [Token(Token = "0x40064C3")] FishingPull,
-    [Token(Token = "0x40064C4")] FishingGiveLine,
-    [Token(Token = "0x40064C5")] FishingFinish,
-    [Token(Token = "0x40064C6")] FishingCancel,
-    [Token(Token = "0x40064C7")] CreateGuildAccessTag,
-    [Token(Token = "0x40064C8")] DeleteGuildAccessTag,
-    [Token(Token = "0x40064C9")] RenameGuildAccessTag,
-    [Token(Token = "0x40064CA")] FlagGuildAccessTagGuildPermission,
-    [Token(Token = "0x40064CB")] AssignGuildAccessTag,
-    [Token(Token = "0x40064CC")] RemoveGuildAccessTagFromPlayer,
-    [Token(Token = "0x40064CD")] ModifyGuildAccessTagEditors,
-    [Token(Token = "0x40064CE")] RequestPublicAccessTags,
-    [Token(Token = "0x40064CF")] ChangeAccessTagPublicFlag,
-    [Token(Token = "0x40064D0")] UpdateGuildAccessTag,
-    [Token(Token = "0x40064D1")] SteamStartMicrotransaction,
-    [Token(Token = "0x40064D2")] SteamFinishMicrotransaction,
-    [Token(Token = "0x40064D3")] SteamIdHasActiveAccount,
-    [Token(Token = "0x40064D4")] CheckEmailAccountState,
-    [Token(Token = "0x40064D5")] LinkAccountToSteamId,
-    [Token(Token = "0x40064D6")] InAppConfirmPaymentGooglePlay,
-    [Token(Token = "0x40064D7")] InAppConfirmPaymentAppleAppStore,
-    [Token(Token = "0x40064D8")] InAppPurchaseRequest,
-    [Token(Token = "0x40064D9")] InAppPurchaseFailed,
-    [Token(Token = "0x40064DA")] CharacterSubscriptionInfo,
-    [Token(Token = "0x40064DB")] AccountSubscriptionInfo,
-    [Token(Token = "0x40064DC")] BuyGvgSeasonBooster,
-    [Token(Token = "0x40064DD")] ChangeFlaggingPrepare,
-    [Token(Token = "0x40064DE")] OverCharge,
-    [Token(Token = "0x40064DF")] OverChargeEnd,
-    [Token(Token = "0x40064E0")] RequestTrusted,
-    [Token(Token = "0x40064E1")] ChangeGuildLogo,
-    [Token(Token = "0x40064E2")] PartyFinderRegisterForUpdates,
-    [Token(Token = "0x40064E3")] PartyFinderUnregisterForUpdates,
-    [Token(Token = "0x40064E4")] PartyFinderEnlistNewPartySearch,
-    [Token(Token = "0x40064E5")] PartyFinderDeletePartySearch,
-    [Token(Token = "0x40064E6")] PartyFinderChangePartySearch,
-    [Token(Token = "0x40064E7")] PartyFinderChangeRole,
-    [Token(Token = "0x40064E8")] PartyFinderApplyForGroup,
-    [Token(Token = "0x40064E9")] PartyFinderAcceptOrDeclineApplyForGroup,
-    [Token(Token = "0x40064EA")] PartyFinderGetEquipmentSnapshot,
-    [Token(Token = "0x40064EB")] PartyFinderRegisterApplicants,
-    [Token(Token = "0x40064EC")] PartyFinderUnregisterApplicants,
-    [Token(Token = "0x40064ED")] PartyFinderFulltextSearch,
-    [Token(Token = "0x40064EE")] PartyFinderRequestEquipmentSnapshot,
-    [Token(Token = "0x40064EF")] GetPersonalSeasonTrackerData,
-    [Token(Token = "0x40064F0")] GetPersonalSeasonPastRewardData,
-    [Token(Token = "0x40064F1")] UseConsumableFromInventory,
-    [Token(Token = "0x40064F2")] ClaimPersonalSeasonReward,
-    [Token(Token = "0x40064F3")] EasyAntiCheatMessageToServer,
-    [Token(Token = "0x40064F4")] XignCodeMessageToServer,
-    [Token(Token = "0x40064F5")] BattlEyeMessageToServer,
-    [Token(Token = "0x40064F6")] SetNextTutorialState,
-    [Token(Token = "0x40064F7")] AddPlayerToMuteList,
-    [Token(Token = "0x40064F8")] RemovePlayerFromMuteList,
-    [Token(Token = "0x40064F9")] ProductShopUserEvent,
-    [Token(Token = "0x40064FA")] GetVanityUnlocks,
-    [Token(Token = "0x40064FB")] BuyVanityUnlocks,
-    [Token(Token = "0x40064FC")] GetMountSkins,
-    [Token(Token = "0x40064FD")] SetMountSkin,
-    [Token(Token = "0x40064FE")] SetWardrobe,
-    [Token(Token = "0x40064FF")] ChangeCustomization,
-    [Token(Token = "0x4006500")] ChangePlayerIslandData,
-    [Token(Token = "0x4006501")] GetGuildChallengePoints,
-    [Token(Token = "0x4006502")] SmartQueueJoin,
-    [Token(Token = "0x4006503")] SmartQueueLeave,
-    [Token(Token = "0x4006504")] SmartQueueSelectSpawnCluster,
-    [Token(Token = "0x4006505")] UpgradeHideout,
-    [Token(Token = "0x4006506")] InitHideoutAttackStart,
-    [Token(Token = "0x4006507")] InitHideoutAttackCancel,
-    [Token(Token = "0x4006508")] HideoutFillNutrition,
-    [Token(Token = "0x4006509")] HideoutGetInfo,
-    [Token(Token = "0x400650A")] HideoutGetOwnerInfo,
-    [Token(Token = "0x400650B")] HideoutSetTribute,
-    [Token(Token = "0x400650C")] HideoutUpgradeWithPowerCrystal,
-    [Token(Token = "0x400650D")] HideoutDeclareHQ,
-    [Token(Token = "0x400650E")] HideoutUndeclareHQ,
-    [Token(Token = "0x400650F")] HideoutGetHQRequirements,
-    [Token(Token = "0x4006510")] HideoutBoost,
-    [Token(Token = "0x4006511")] HideoutBoostConstruction,
-    [Token(Token = "0x4006512")] OpenWorldAttackScheduleStart,
-    [Token(Token = "0x4006513")] OpenWorldAttackScheduleCancel,
-    [Token(Token = "0x4006514")] OpenWorldAttackConquerStart,
-    [Token(Token = "0x4006515")] OpenWorldAttackConquerCancel,
-    [Token(Token = "0x4006516")] GetOpenWorldAttackDetails,
-    [Token(Token = "0x4006517")] GetNextOpenWorldAttackScheduleTime,
-    [Token(Token = "0x4006518")] RecoverVaultFromHideout,
-    [Token(Token = "0x4006519")] GetGuildEnergyDrainInfo,
-    [Token(Token = "0x400651A")] ChannelingUpdate,
-    [Token(Token = "0x400651B")] UseCorruptedShrine,
-    [Token(Token = "0x400651C")] RequestEstimatedMarketValue,
-    [Token(Token = "0x400651D")] LogFeedback,
-    [Token(Token = "0x400651E")] GetInfamyInfo,
-    [Token(Token = "0x400651F")] GetPartySmartClusterQueuePriority,
-    [Token(Token = "0x4006520")] SetPartySmartClusterQueuePriority,
-    [Token(Token = "0x4006521")] ClientAntiAutoClickerInfo,
-    [Token(Token = "0x4006522")] ClientBotPatternDetectionInfo,
-    [Token(Token = "0x4006523")] ClientAntiGatherClickerInfo,
-    [Token(Token = "0x4006524")] LoadoutCreate,
-    [Token(Token = "0x4006525")] LoadoutRead,
-    [Token(Token = "0x4006526")] LoadoutReadHeaders,
-    [Token(Token = "0x4006527")] LoadoutUpdate,
-    [Token(Token = "0x4006528")] LoadoutDelete,
-    [Token(Token = "0x4006529")] LoadoutOrderUpdate,
-    [Token(Token = "0x400652A")] LoadoutEquip,
-    [Token(Token = "0x400652B")] BatchUseItemCancel,
-    [Token(Token = "0x400652C")] EnlistFactionWarfare,
-    [Token(Token = "0x400652D")] GetFactionWarfareWeeklyReport,
-    [Token(Token = "0x400652E")] ClaimFactionWarfareWeeklyReport,
-    [Token(Token = "0x400652F")] GetFactionWarfareCampaignData,
-    [Token(Token = "0x4006530")] ClaimFactionWarfareItemReward,
-    [Token(Token = "0x4006531")] SendMemoryConsumption,
-    [Token(Token = "0x4006532")] PickupCarriableObjectStart,
-    [Token(Token = "0x4006533")] PickupCarriableObjectCancel,
-    [Token(Token = "0x4006534")] SetSavingChestLogsFlag,
-    [Token(Token = "0x4006535")] GetSavingChestLogsFlag,
-    [Token(Token = "0x4006536")] RegisterGuestAccount,
-    [Token(Token = "0x4006537")] ResendGuestAccountVerificationEmail,
-    [Token(Token = "0x4006538")] DoSimpleActionStart,
-    [Token(Token = "0x4006539")] DoSimpleActionCancel,
-    [Token(Token = "0x400653A")] GetGvgSeasonContributionByActivity,
-    [Token(Token = "0x400653B")] GetGvgSeasonContributionByCrystalLeague,
-    [Token(Token = "0x400653C")] GetGuildMightCategoryContribution,
-    [Token(Token = "0x400653D")] GetGuildMightCategoryOverview,
-    [Token(Token = "0x400653E")] GetPvpChallengeData,
-    [Token(Token = "0x400653F")] ClaimPvpChallengeWeeklyReward,
-    [Token(Token = "0x4006540")] GetPersonalMightStats,
-    [Token(Token = "0x4006541")] AuctionGetLoadoutOffers,
-    [Token(Token = "0x4006542")] AuctionBuyLoadoutOffer,
-    [Token(Token = "0x4006543")] AccountDeletionRequest,
-    [Token(Token = "0x4006544")] AccountReactivationRequest,
-    [Token(Token = "0x4006545")] GetModerationEscalationDefiniton,
-    [Token(Token = "0x4006546")] EventBasedPopupAddSeen,
-    [Token(Token = "0x4006547")] GetItemKillHistory,
-    [Token(Token = "0x4006548")] GetVanityConsumables,
-    [Token(Token = "0x4006549")] EquipKillEmote,
-    [Token(Token = "0x400654A")] ChangeKillEmotePlayOnKnockdownSetting,
-    [Token(Token = "0x400654B")] BuyVanityConsumableCharges,
-    [Token(Token = "0x400654C")] ReclaimVanityItem,
-    [Token(Token = "0x400654D")] GetArenaRankings,
-    [Token(Token = "0x400654E")] GetCrystalLeagueStatistics,
-    [Token(Token = "0x400654F")] SendOptionsLog,
-    [Token(Token = "0x4006550")] SendControlsOptionsLog,
-    [Token(Token = "0x4006551")] MistsUseImmediateReturnExit,
-    [Token(Token = "0x4006552")] MistsUseStaticEntrance,
-    [Token(Token = "0x4006553")] MistsUseCityRoadsEntrance,
-    [Token(Token = "0x4006554")] ChangeNewGuildMemberMail,
-    [Token(Token = "0x4006555")] GetNewGuildMemberMail,
-    [Token(Token = "0x4006556")] ChangeGuildFactionAllegiance,
-    [Token(Token = "0x4006557")] GetGuildFactionAllegiance,
-    [Token(Token = "0x4006558")] GuildBannerChange,
-    [Token(Token = "0x4006559")] GuildGetOptionalStats,
-    [Token(Token = "0x400655A")] GuildSetOptionalStats,
-    [Token(Token = "0x400655B")] GetPlayerInfoForStalk,
-    [Token(Token = "0x400655C")] PayGoldForCharacterTypeChange,
-    [Token(Token = "0x400655D")] QuickSellAuctionQueryAction,
-    [Token(Token = "0x400655E")] QuickSellAuctionSellAction,
-    [Token(Token = "0x400655F")] FcmTokenToServer,
-    [Token(Token = "0x4006560")] ApnsTokenToServer,
-    [Token(Token = "0x4006561")] DeathRecap,
-    [Token(Token = "0x4006562")] AuctionFetchFinishedAuctions,
-    [Token(Token = "0x4006563")] AbortAuctionFetchFinishedAuctions,
-    [Token(Token = "0x4006564")] RequestLegendaryEvenHistory,
-    [Token(Token = "0x4006565")] PartyAnswerStartHuntRequest,
-    [Token(Token = "0x4006566")] HuntAbort,
-    [Token(Token = "0x4006567")] UseFindTrackSpellFromItemPrepare,
-    [Token(Token = "0x4006568")] InteractWithTrackStart,
-    [Token(Token = "0x4006569")] InteractWithTrackCancel,
-    [Token(Token = "0x400656A")] TerritoryRaidStart,
-    [Token(Token = "0x400656B")] TerritoryRaidCancel,
-    [Token(Token = "0x400656C")] TerritoryClaimRaidedRawEnergyCrystalResult,
-    [Token(Token = "0x400656D")] GvGSeasonPlayerGuildParticipationDetails,
-    [Token(Token = "0x400656E")] DailyMightBonus,
-    [Token(Token = "0x400656F")] ClaimDailyMightBonus,
-    [Token(Token = "0x4006570")] GetFortificationGroupInfo,
-    [Token(Token = "0x4006571")] UpgradeFortificationGroup,
-    [Token(Token = "0x4006572")] CancelUpgradeFortificationGroup,
-    [Token(Token = "0x4006573")] DowngradeFortificationGroup,
-    [Token(Token = "0x4006574")] GetClusterActivityChestEstimates,
-    [Token(Token = "0x4006575")] PartyReadyCheckBegin,
-    [Token(Token = "0x4006576")] PartyReadyCheckUpdate,
-    [Token(Token = "0x4006577")] ClaimAlbionJournalReward,
-    [Token(Token = "0x4006578")] TrackAlbionJournalAchievements,
-    [Token(Token = "0x4006579")] RequestOutlandsTeleportationUsage,
+    [Token(Token = "0x4006164")] Leave = 1,
+    [Token(Token = "0x4006165")] JoinFinished = 2,
+    [Token(Token = "0x4006166")] Move = 3,
+    [Token(Token = "0x4006167")] Teleport = 4,
+    [Token(Token = "0x4006168")] ChangeEquipment = 5,
+    [Token(Token = "0x4006169")] HealthUpdate = 6,
+    [Token(Token = "0x400616A")] HealthUpdates = 7,
+    [Token(Token = "0x400616B")] EnergyUpdate = 8,
+    [Token(Token = "0x400616C")] DamageShieldUpdate = 9,
+    [Token(Token = "0x400616D")] CraftingFocusUpdate = 10, // 0x000A
+    [Token(Token = "0x400616E")] ActiveSpellEffectsUpdate = 11, // 0x000B
+    [Token(Token = "0x400616F")] ResetCooldowns = 12, // 0x000C
+    [Token(Token = "0x4006170")] Attack = 13, // 0x000D
+    [Token(Token = "0x4006171")] CastStart = 14, // 0x000E
+    [Token(Token = "0x4006172")] ChannelingUpdate = 15, // 0x000F
+    [Token(Token = "0x4006173")] CastCancel = 16, // 0x0010
+    [Token(Token = "0x4006174")] CastTimeUpdate = 17, // 0x0011
+    [Token(Token = "0x4006175")] CastFinished = 18, // 0x0012
+    [Token(Token = "0x4006176")] CastSpell = 19, // 0x0013
+    [Token(Token = "0x4006177")] CastSpells = 20, // 0x0014
+    [Token(Token = "0x4006178")] CastHit = 21, // 0x0015
+    [Token(Token = "0x4006179")] CastHits = 22, // 0x0016
+    [Token(Token = "0x400617A")] StoredTargetsUpdate = 23, // 0x0017
+    [Token(Token = "0x400617B")] ChannelingEnded = 24, // 0x0018
+    [Token(Token = "0x400617C")] AttackBuilding = 25, // 0x0019
+    [Token(Token = "0x400617D")] InventoryPutItem = 26, // 0x001A
+    [Token(Token = "0x400617E")] InventoryDeleteItem = 27, // 0x001B
+    [Token(Token = "0x400617F")] InventoryState = 28, // 0x001C
+    [Token(Token = "0x4006180")] NewCharacter = 29, // 0x001D
+    [Token(Token = "0x4006181")] NewEquipmentItem = 30, // 0x001E
+    [Token(Token = "0x4006182")] NewSiegeBannerItem = 31, // 0x001F
+    [Token(Token = "0x4006183")] NewSimpleItem = 32, // 0x0020
+    [Token(Token = "0x4006184")] NewFurnitureItem = 33, // 0x0021
+    [Token(Token = "0x4006185")] NewKillTrophyItem = 34, // 0x0022
+    [Token(Token = "0x4006186")] NewJournalItem = 35, // 0x0023
+    [Token(Token = "0x4006187")] NewLaborerItem = 36, // 0x0024
+    [Token(Token = "0x4006188")] NewEquipmentItemLegendarySoul = 37, // 0x0025
+    [Token(Token = "0x4006189")] NewSimpleHarvestableObject = 38, // 0x0026
+    [Token(Token = "0x400618A")] NewSimpleHarvestableObjectList = 39, // 0x0027
+    [Token(Token = "0x400618B")] NewHarvestableObject = 40, // 0x0028
+    [Token(Token = "0x400618C")] NewTreasureDestinationObject = 41, // 0x0029
+    [Token(Token = "0x400618D")] TreasureDestinationObjectStatus = 42, // 0x002A
+    [Token(Token = "0x400618E")] CloseTreasureDestinationObject = 43, // 0x002B
+    [Token(Token = "0x400618F")] NewSilverObject = 44, // 0x002C
+    [Token(Token = "0x4006190")] NewBuilding = 45, // 0x002D
+    [Token(Token = "0x4006191")] HarvestableChangeState = 46, // 0x002E
+    [Token(Token = "0x4006192")] MobChangeState = 47, // 0x002F
+    [Token(Token = "0x4006193")] FactionBuildingInfo = 48, // 0x0030
+    [Token(Token = "0x4006194")] CraftBuildingInfo = 49, // 0x0031
+    [Token(Token = "0x4006195")] RepairBuildingInfo = 50, // 0x0032
+    [Token(Token = "0x4006196")] MeldBuildingInfo = 51, // 0x0033
+    [Token(Token = "0x4006197")] ConstructionSiteInfo = 52, // 0x0034
+    [Token(Token = "0x4006198")] PlayerBuildingInfo = 53, // 0x0035
+    [Token(Token = "0x4006199")] FarmBuildingInfo = 54, // 0x0036
+    [Token(Token = "0x400619A")] TutorialBuildingInfo = 55, // 0x0037
+    [Token(Token = "0x400619B")] LaborerObjectInfo = 56, // 0x0038
+    [Token(Token = "0x400619C")] LaborerObjectJobInfo = 57, // 0x0039
+    [Token(Token = "0x400619D")] MarketPlaceBuildingInfo = 58, // 0x003A
+    [Token(Token = "0x400619E")] HarvestStart = 59, // 0x003B
+    [Token(Token = "0x400619F")] HarvestCancel = 60, // 0x003C
+    [Token(Token = "0x40061A0")] HarvestFinished = 61, // 0x003D
+    [Token(Token = "0x40061A1")] TakeSilver = 62, // 0x003E
+    [Token(Token = "0x40061A2")] RemoveSilver = 63, // 0x003F
+    [Token(Token = "0x40061A3")] ActionOnBuildingStart = 64, // 0x0040
+    [Token(Token = "0x40061A4")] ActionOnBuildingCancel = 65, // 0x0041
+    [Token(Token = "0x40061A5")] ActionOnBuildingFinished = 66, // 0x0042
+    [Token(Token = "0x40061A6")] ItemRerollQualityFinished = 67, // 0x0043
+    [Token(Token = "0x40061A7")] InstallResourceStart = 68, // 0x0044
+    [Token(Token = "0x40061A8")] InstallResourceCancel = 69, // 0x0045
+    [Token(Token = "0x40061A9")] InstallResourceFinished = 70, // 0x0046
+    [Token(Token = "0x40061AA")] CraftItemFinished = 71, // 0x0047
+    [Token(Token = "0x40061AB")] LogoutCancel = 72, // 0x0048
+    [Token(Token = "0x40061AC")] ChatMessage = 73, // 0x0049
+    [Token(Token = "0x40061AD")] ChatSay = 74, // 0x004A
+    [Token(Token = "0x40061AE")] ChatWhisper = 75, // 0x004B
+    [Token(Token = "0x40061AF")] ChatMuted = 76, // 0x004C
+    [Token(Token = "0x40061B0")] PlayEmote = 77, // 0x004D
+    [Token(Token = "0x40061B1")] StopEmote = 78, // 0x004E
+    [Token(Token = "0x40061B2")] SystemMessage = 79, // 0x004F
+    [Token(Token = "0x40061B3")] UtilityTextMessage = 80, // 0x0050
+    [Token(Token = "0x40061B4")] UpdateMoney = 81, // 0x0051
+    [Token(Token = "0x40061B5")] UpdateFame = 82, // 0x0052
+    [Token(Token = "0x40061B6")] UpdateLearningPoints = 83, // 0x0053
+    [Token(Token = "0x40061B7")] UpdateReSpecPoints = 84, // 0x0054
+    [Token(Token = "0x40061B8")] UpdateCurrency = 85, // 0x0055
+    [Token(Token = "0x40061B9")] UpdateFactionStanding = 86, // 0x0056
+    [Token(Token = "0x40061BA")] UpdateMistCityStanding = 87, // 0x0057
+    [Token(Token = "0x40061BB")] Respawn = 88, // 0x0058
+    [Token(Token = "0x40061BC")] ServerDebugLog = 89, // 0x0059
+    [Token(Token = "0x40061BD")] CharacterEquipmentChanged = 90, // 0x005A
+    [Token(Token = "0x40061BE")] RegenerationHealthChanged = 91, // 0x005B
+    [Token(Token = "0x40061BF")] RegenerationEnergyChanged = 92, // 0x005C
+    [Token(Token = "0x40061C0")] RegenerationMountHealthChanged = 93, // 0x005D
+    [Token(Token = "0x40061C1")] RegenerationCraftingChanged = 94, // 0x005E
+    [Token(Token = "0x40061C2")] RegenerationHealthEnergyComboChanged = 95, // 0x005F
+    [Token(Token = "0x40061C3")] RegenerationPlayerComboChanged = 96, // 0x0060
+    [Token(Token = "0x40061C4")] DurabilityChanged = 97, // 0x0061
+    [Token(Token = "0x40061C5")] NewLoot = 98, // 0x0062
+    [Token(Token = "0x40061C6")] AttachItemContainer = 99, // 0x0063
+    [Token(Token = "0x40061C7")] DetachItemContainer = 100, // 0x0064
+    [Token(Token = "0x40061C8")] InvalidateItemContainer = 101, // 0x0065
+    [Token(Token = "0x40061C9")] LockItemContainer = 102, // 0x0066
+    [Token(Token = "0x40061CA")] GuildUpdate = 103, // 0x0067
+    [Token(Token = "0x40061CB")] GuildPlayerUpdated = 104, // 0x0068
+    [Token(Token = "0x40061CC")] InvitedToGuild = 105, // 0x0069
+    [Token(Token = "0x40061CD")] GuildMemberWorldUpdate = 106, // 0x006A
+    [Token(Token = "0x40061CE")] UpdateMatchDetails = 107, // 0x006B
+    [Token(Token = "0x40061CF")] ObjectEvent = 108, // 0x006C
+    [Token(Token = "0x40061D0")] NewMonolithObject = 109, // 0x006D
+    [Token(Token = "0x40061D1")] MonolithHasBannersPlacedUpdate = 110, // 0x006E
+    [Token(Token = "0x40061D2")] NewOrbObject = 111, // 0x006F
+    [Token(Token = "0x40061D3")] NewCastleObject = 112, // 0x0070
+    [Token(Token = "0x40061D4")] NewSpellEffectArea = 113, // 0x0071
+    [Token(Token = "0x40061D5")] UpdateSpellEffectArea = 114, // 0x0072
+    [Token(Token = "0x40061D6")] NewChainSpell = 115, // 0x0073
+    [Token(Token = "0x40061D7")] UpdateChainSpell = 116, // 0x0074
+    [Token(Token = "0x40061D8")] NewTreasureChest = 117, // 0x0075
+    [Token(Token = "0x40061D9")] StartMatch = 118, // 0x0076
+    [Token(Token = "0x40061DA")] StartArenaMatchInfos = 119, // 0x0077
+    [Token(Token = "0x40061DB")] EndArenaMatch = 120, // 0x0078
+    [Token(Token = "0x40061DC")] MatchUpdate = 121, // 0x0079
+    [Token(Token = "0x40061DD")] ActiveMatchUpdate = 122, // 0x007A
+    [Token(Token = "0x40061DE")] NewMob = 123, // 0x007B
+    [Token(Token = "0x40061DF")] DebugMobInfo = 124, // 0x007C
+    [Token(Token = "0x40061E0")] DebugVariablesInfo = 125, // 0x007D
+    [Token(Token = "0x40061E1")] DebugReputationInfo = 126, // 0x007E
+    [Token(Token = "0x40061E2")] DebugDiminishingReturnInfo = 127, // 0x007F
+    [Token(Token = "0x40061E3")] DebugSmartClusterQueueInfo = 128, // 0x0080
+    [Token(Token = "0x40061E4")] ClaimOrbStart = 129, // 0x0081
+    [Token(Token = "0x40061E5")] ClaimOrbFinished = 130, // 0x0082
+    [Token(Token = "0x40061E6")] ClaimOrbCancel = 131, // 0x0083
+    [Token(Token = "0x40061E7")] OrbUpdate = 132, // 0x0084
+    [Token(Token = "0x40061E8")] OrbClaimed = 133, // 0x0085
+    [Token(Token = "0x40061E9")] OrbReset = 134, // 0x0086
+    [Token(Token = "0x40061EA")] NewWarCampObject = 135, // 0x0087
+    [Token(Token = "0x40061EB")] NewMatchLootChestObject = 136, // 0x0088
+    [Token(Token = "0x40061EC")] NewArenaExit = 137, // 0x0089
+    [Token(Token = "0x40061ED")] GuildMemberTerritoryUpdate = 138, // 0x008A
+    [Token(Token = "0x40061EE")] InvitedMercenaryToMatch = 139, // 0x008B
+    [Token(Token = "0x40061EF")] ClusterInfoUpdate = 140, // 0x008C
+    [Token(Token = "0x40061F0")] ForcedMovement = 141, // 0x008D
+    [Token(Token = "0x40061F1")] ForcedMovementCancel = 142, // 0x008E
+    [Token(Token = "0x40061F2")] CharacterStats = 143, // 0x008F
+    [Token(Token = "0x40061F3")] CharacterStatsKillHistory = 144, // 0x0090
+    [Token(Token = "0x40061F4")] CharacterStatsDeathHistory = 145, // 0x0091
+    [Token(Token = "0x40061F5")] GuildStats = 146, // 0x0092
+    [Token(Token = "0x40061F6")] KillHistoryDetails = 147, // 0x0093
+    [Token(Token = "0x40061F7")] FullAchievementInfo = 148, // 0x0094
+    [Token(Token = "0x40061F8")] FinishedAchievement = 149, // 0x0095
+    [Token(Token = "0x40061F9")] AchievementProgressInfo = 150, // 0x0096
+    [Token(Token = "0x40061FA")] FullAchievementProgressInfo = 151, // 0x0097
+    [Token(Token = "0x40061FB")] FullTrackedAchievementInfo = 152, // 0x0098
+    [Token(Token = "0x40061FC")] FullAutoLearnAchievementInfo = 153, // 0x0099
+    [Token(Token = "0x40061FD")] QuestGiverQuestOffered = 154, // 0x009A
+    [Token(Token = "0x40061FE")] QuestGiverDebugInfo = 155, // 0x009B
+    [Token(Token = "0x40061FF")] ConsoleEvent = 156, // 0x009C
+    [Token(Token = "0x4006200")] TimeSync = 157, // 0x009D
+    [Token(Token = "0x4006201")] ChangeAvatar = 158, // 0x009E
+    [Token(Token = "0x4006202")] ChangeMountSkin = 159, // 0x009F
+    [Token(Token = "0x4006203")] GameEvent = 160, // 0x00A0
+    [Token(Token = "0x4006204")] KilledPlayer = 161, // 0x00A1
+    [Token(Token = "0x4006205")] Died = 162, // 0x00A2
+    [Token(Token = "0x4006206")] KnockedDown = 163, // 0x00A3
+    [Token(Token = "0x4006207")] Unconcious = 164, // 0x00A4
+    [Token(Token = "0x4006208")] MatchPlayerJoinedEvent = 165, // 0x00A5
+    [Token(Token = "0x4006209")] MatchPlayerStatsEvent = 166, // 0x00A6
+    [Token(Token = "0x400620A")] MatchPlayerStatsCompleteEvent = 167, // 0x00A7
+    [Token(Token = "0x400620B")] MatchTimeLineEventEvent = 168, // 0x00A8
+    [Token(Token = "0x400620C")] MatchPlayerMainGearStatsEvent = 169, // 0x00A9
+    [Token(Token = "0x400620D")] MatchPlayerChangedAvatarEvent = 170, // 0x00AA
+    [Token(Token = "0x400620E")] InvitationPlayerTrade = 171, // 0x00AB
+    [Token(Token = "0x400620F")] PlayerTradeStart = 172, // 0x00AC
+    [Token(Token = "0x4006210")] PlayerTradeCancel = 173, // 0x00AD
+    [Token(Token = "0x4006211")] PlayerTradeUpdate = 174, // 0x00AE
+    [Token(Token = "0x4006212")] PlayerTradeFinished = 175, // 0x00AF
+    [Token(Token = "0x4006213")] PlayerTradeAcceptChange = 176, // 0x00B0
+    [Token(Token = "0x4006214")] MiniMapPing = 177, // 0x00B1
+    [Token(Token = "0x4006215")] MarketPlaceNotification = 178, // 0x00B2
+    [Token(Token = "0x4006216")] DuellingChallengePlayer = 179, // 0x00B3
+    [Token(Token = "0x4006217")] NewDuellingPost = 180, // 0x00B4
+    [Token(Token = "0x4006218")] DuelStarted = 181, // 0x00B5
+    [Token(Token = "0x4006219")] DuelEnded = 182, // 0x00B6
+    [Token(Token = "0x400621A")] DuelDenied = 183, // 0x00B7
+    [Token(Token = "0x400621B")] DuelRequestCanceled = 184, // 0x00B8
+    [Token(Token = "0x400621C")] DuelLeftArea = 185, // 0x00B9
+    [Token(Token = "0x400621D")] DuelReEnteredArea = 186, // 0x00BA
+    [Token(Token = "0x400621E")] NewRealEstate = 187, // 0x00BB
+    [Token(Token = "0x400621F")] MiniMapOwnedBuildingsPositions = 188, // 0x00BC
+    [Token(Token = "0x4006220")] RealEstateListUpdate = 189, // 0x00BD
+    [Token(Token = "0x4006221")] GuildLogoUpdate = 190, // 0x00BE
+    [Token(Token = "0x4006222")] GuildLogoChanged = 191, // 0x00BF
+    [Token(Token = "0x4006223")] PlaceableObjectPlace = 192, // 0x00C0
+    [Token(Token = "0x4006224")] PlaceableObjectPlaceCancel = 193, // 0x00C1
+    [Token(Token = "0x4006225")] FurnitureObjectBuffProviderInfo = 194, // 0x00C2
+    [Token(Token = "0x4006226")] FurnitureObjectCheatProviderInfo = 195, // 0x00C3
+    [Token(Token = "0x4006227")] FarmableObjectInfo = 196, // 0x00C4
+    [Token(Token = "0x4006228")] NewUnreadMails = 197, // 0x00C5
+    [Token(Token = "0x4006229")] MailOperationPossible = 198, // 0x00C6
+    [Token(Token = "0x400622A")] GuildLogoObjectUpdate = 199, // 0x00C7
+    [Token(Token = "0x400622B")] StartLogout = 200, // 0x00C8
+    [Token(Token = "0x400622C")] NewChatChannels = 201, // 0x00C9
+    [Token(Token = "0x400622D")] JoinedChatChannel = 202, // 0x00CA
+    [Token(Token = "0x400622E")] LeftChatChannel = 203, // 0x00CB
+    [Token(Token = "0x400622F")] RemovedChatChannel = 204, // 0x00CC
+    [Token(Token = "0x4006230")] AccessStatus = 205, // 0x00CD
+    [Token(Token = "0x4006231")] Mounted = 206, // 0x00CE
+    [Token(Token = "0x4006232")] MountStart = 207, // 0x00CF
+    [Token(Token = "0x4006233")] MountCancel = 208, // 0x00D0
+    [Token(Token = "0x4006234")] NewTravelpoint = 209, // 0x00D1
+    [Token(Token = "0x4006235")] NewIslandAccessPoint = 210, // 0x00D2
+    [Token(Token = "0x4006236")] NewExit = 211, // 0x00D3
+    [Token(Token = "0x4006237")] UpdateHome = 212, // 0x00D4
+    [Token(Token = "0x4006238")] UpdateChatSettings = 213, // 0x00D5
+    [Token(Token = "0x4006239")] ResurrectionOffer = 214, // 0x00D6
+    [Token(Token = "0x400623A")] ResurrectionReply = 215, // 0x00D7
+    [Token(Token = "0x400623B")] LootEquipmentChanged = 216, // 0x00D8
+    [Token(Token = "0x400623C")] UpdateUnlockedGuildLogos = 217, // 0x00D9
+    [Token(Token = "0x400623D")] UpdateUnlockedAvatars = 218, // 0x00DA
+    [Token(Token = "0x400623E")] UpdateUnlockedAvatarRings = 219, // 0x00DB
+    [Token(Token = "0x400623F")] UpdateUnlockedBuildings = 220, // 0x00DC
+    [Token(Token = "0x4006240")] NewIslandManagement = 221, // 0x00DD
+    [Token(Token = "0x4006241")] NewTeleportStone = 222, // 0x00DE
+    [Token(Token = "0x4006242")] Cloak = 223, // 0x00DF
+    [Token(Token = "0x4006243")] PartyInvitation = 224, // 0x00E0
+    [Token(Token = "0x4006244")] PartyJoinRequest = 225, // 0x00E1
+    [Token(Token = "0x4006245")] PartyJoined = 226, // 0x00E2
+    [Token(Token = "0x4006246")] PartyDisbanded = 227, // 0x00E3
+    [Token(Token = "0x4006247")] PartyPlayerJoined = 228, // 0x00E4
+    [Token(Token = "0x4006248")] PartyChangedOrder = 229, // 0x00E5
+    [Token(Token = "0x4006249")] PartyPlayerLeft = 230, // 0x00E6
+    [Token(Token = "0x400624A")] PartyLeaderChanged = 231, // 0x00E7
+    [Token(Token = "0x400624B")] PartyLootSettingChangedPlayer = 232, // 0x00E8
+    [Token(Token = "0x400624C")] PartySilverGained = 233, // 0x00E9
+    [Token(Token = "0x400624D")] PartyPlayerUpdated = 234, // 0x00EA
+    [Token(Token = "0x400624E")] PartyInvitationAnswer = 235, // 0x00EB
+    [Token(Token = "0x400624F")] PartyJoinRequestAnswer = 236, // 0x00EC
+    [Token(Token = "0x4006250")] PartyMarkedObjectsUpdated = 237, // 0x00ED
+    [Token(Token = "0x4006251")] PartyOnClusterPartyJoined = 238, // 0x00EE
+    [Token(Token = "0x4006252")] PartySetRoleFlag = 239, // 0x00EF
+    [Token(Token = "0x4006253")] PartyInviteOrJoinPlayerEquipmentInfo = 240, // 0x00F0
+    [Token(Token = "0x4006254")] PartyReadyCheckUpdate = 241, // 0x00F1
+    [Token(Token = "0x4006255")] SpellCooldownUpdate = 242, // 0x00F2
+    [Token(Token = "0x4006256")] NewHellgateExitPortal = 243, // 0x00F3
+    [Token(Token = "0x4006257")] NewExpeditionExit = 244, // 0x00F4
+    [Token(Token = "0x4006258")] NewExpeditionNarrator = 245, // 0x00F5
+    [Token(Token = "0x4006259")] ExitEnterStart = 246, // 0x00F6
+    [Token(Token = "0x400625A")] ExitEnterCancel = 247, // 0x00F7
+    [Token(Token = "0x400625B")] ExitEnterFinished = 248, // 0x00F8
+    [Token(Token = "0x400625C")] NewQuestGiverObject = 249, // 0x00F9
+    [Token(Token = "0x400625D")] FullQuestInfo = 250, // 0x00FA
+    [Token(Token = "0x400625E")] QuestProgressInfo = 251, // 0x00FB
+    [Token(Token = "0x400625F")] QuestGiverInfoForPlayer = 252, // 0x00FC
+    [Token(Token = "0x4006260")] FullExpeditionInfo = 253, // 0x00FD
+    [Token(Token = "0x4006261")] ExpeditionQuestProgressInfo = 254, // 0x00FE
+    [Token(Token = "0x4006262")] InvitedToExpedition = 255, // 0x00FF
+    [Token(Token = "0x4006263")] ExpeditionRegistrationInfo = 256, // 0x0100
+    [Token(Token = "0x4006264")] EnteringExpeditionStart = 257, // 0x0101
+    [Token(Token = "0x4006265")] EnteringExpeditionCancel = 258, // 0x0102
+    [Token(Token = "0x4006266")] RewardGranted = 259, // 0x0103
+    [Token(Token = "0x4006267")] ArenaRegistrationInfo = 260, // 0x0104
+    [Token(Token = "0x4006268")] EnteringArenaStart = 261, // 0x0105
+    [Token(Token = "0x4006269")] EnteringArenaCancel = 262, // 0x0106
+    [Token(Token = "0x400626A")] EnteringArenaLockStart = 263, // 0x0107
+    [Token(Token = "0x400626B")] EnteringArenaLockCancel = 264, // 0x0108
+    [Token(Token = "0x400626C")] InvitedToArenaMatch = 265, // 0x0109
+    [Token(Token = "0x400626D")] UsingHellgateShrine = 266, // 0x010A
+    [Token(Token = "0x400626E")] EnteringHellgateLockStart = 267, // 0x010B
+    [Token(Token = "0x400626F")] EnteringHellgateLockCancel = 268, // 0x010C
+    [Token(Token = "0x4006270")] PlayerCounts = 269, // 0x010D
+    [Token(Token = "0x4006271")] InCombatStateUpdate = 270, // 0x010E
+    [Token(Token = "0x4006272")] OtherGrabbedLoot = 271, // 0x010F
+    [Token(Token = "0x4006273")] TreasureChestUsingStart = 272, // 0x0110
+    [Token(Token = "0x4006274")] TreasureChestUsingFinished = 273, // 0x0111
+    [Token(Token = "0x4006275")] TreasureChestUsingCancel = 274, // 0x0112
+    [Token(Token = "0x4006276")] TreasureChestUsingOpeningComplete = 275, // 0x0113
+    [Token(Token = "0x4006277")] TreasureChestForceCloseInventory = 276, // 0x0114
+    [Token(Token = "0x4006278")] LocalTreasuresUpdate = 277, // 0x0115
+    [Token(Token = "0x4006279")] LootChestSpawnpointsUpdate = 278, // 0x0116
+    [Token(Token = "0x400627A")] PremiumChanged = 279, // 0x0117
+    [Token(Token = "0x400627B")] PremiumExtended = 280, // 0x0118
+    [Token(Token = "0x400627C")] PremiumLifeTimeRewardGained = 281, // 0x0119
+    [Token(Token = "0x400627D")] GoldPurchased = 282, // 0x011A
+    [Token(Token = "0x400627E")] LaborerGotUpgraded = 283, // 0x011B
+    [Token(Token = "0x400627F")] JournalGotFull = 284, // 0x011C
+    [Token(Token = "0x4006280")] JournalFillError = 285, // 0x011D
+    [Token(Token = "0x4006281")] FriendRequest = 286, // 0x011E
+    [Token(Token = "0x4006282")] FriendRequestInfos = 287, // 0x011F
+    [Token(Token = "0x4006283")] FriendInfos = 288, // 0x0120
+    [Token(Token = "0x4006284")] FriendRequestAnswered = 289, // 0x0121
+    [Token(Token = "0x4006285")] FriendOnlineStatus = 290, // 0x0122
+    [Token(Token = "0x4006286")] FriendRequestCanceled = 291, // 0x0123
+    [Token(Token = "0x4006287")] FriendRemoved = 292, // 0x0124
+    [Token(Token = "0x4006288")] FriendUpdated = 293, // 0x0125
+    [Token(Token = "0x4006289")] PartyLootItems = 294, // 0x0126
+    [Token(Token = "0x400628A")] PartyLootItemsRemoved = 295, // 0x0127
+    [Token(Token = "0x400628B")] ReputationUpdate = 296, // 0x0128
+    [Token(Token = "0x400628C")] DefenseUnitAttackBegin = 297, // 0x0129
+    [Token(Token = "0x400628D")] DefenseUnitAttackEnd = 298, // 0x012A
+    [Token(Token = "0x400628E")] DefenseUnitAttackDamage = 299, // 0x012B
+    [Token(Token = "0x400628F")] UnrestrictedPvpZoneUpdate = 300, // 0x012C
+    [Token(Token = "0x4006290")] ReputationImplicationUpdate = 301, // 0x012D
+    [Token(Token = "0x4006291")] NewMountObject = 302, // 0x012E
+    [Token(Token = "0x4006292")] MountHealthUpdate = 303, // 0x012F
+    [Token(Token = "0x4006293")] MountCooldownUpdate = 304, // 0x0130
+    [Token(Token = "0x4006294")] NewExpeditionAgent = 305, // 0x0131
+    [Token(Token = "0x4006295")] NewExpeditionCheckPoint = 306, // 0x0132
+    [Token(Token = "0x4006296")] ExpeditionStartEvent = 307, // 0x0133
+    [Token(Token = "0x4006297")] VoteEvent = 308, // 0x0134
+    [Token(Token = "0x4006298")] RatingEvent = 309, // 0x0135
+    [Token(Token = "0x4006299")] NewArenaAgent = 310, // 0x0136
+    [Token(Token = "0x400629A")] BoostFarmable = 311, // 0x0137
+    [Token(Token = "0x400629B")] UseFunction = 312, // 0x0138
+    [Token(Token = "0x400629C")] NewPortalEntrance = 313, // 0x0139
+    [Token(Token = "0x400629D")] NewPortalExit = 314, // 0x013A
+    [Token(Token = "0x400629E")] NewRandomDungeonExit = 315, // 0x013B
+    [Token(Token = "0x400629F")] WaitingQueueUpdate = 316, // 0x013C
+    [Token(Token = "0x40062A0")] PlayerMovementRateUpdate = 317, // 0x013D
+    [Token(Token = "0x40062A1")] ObserveStart = 318, // 0x013E
+    [Token(Token = "0x40062A2")] MinimapZergs = 319, // 0x013F
+    [Token(Token = "0x40062A3")] MinimapSmartClusterZergs = 320, // 0x0140
+    [Token(Token = "0x40062A4")] PaymentTransactions = 321, // 0x0141
+    [Token(Token = "0x40062A5")] PerformanceStatsUpdate = 322, // 0x0142
+    [Token(Token = "0x40062A6")] OverloadModeUpdate = 323, // 0x0143
+    [Token(Token = "0x40062A7")] DebugDrawEvent = 324, // 0x0144
+    [Token(Token = "0x40062A8")] RecordCameraMove = 325, // 0x0145
+    [Token(Token = "0x40062A9")] RecordStart = 326, // 0x0146
+    [Token(Token = "0x40062AA")] DeliverCarriableObjectStart = 327, // 0x0147
+    [Token(Token = "0x40062AB")] DeliverCarriableObjectCancel = 328, // 0x0148
+    [Token(Token = "0x40062AC")] DeliverCarriableObjectReset = 329, // 0x0149
+    [Token(Token = "0x40062AD")] DeliverCarriableObjectFinished = 330, // 0x014A
+    [Token(Token = "0x40062AE")] TerritoryClaimStart = 331, // 0x014B
+    [Token(Token = "0x40062AF")] TerritoryClaimCancel = 332, // 0x014C
+    [Token(Token = "0x40062B0")] TerritoryClaimFinished = 333, // 0x014D
+    [Token(Token = "0x40062B1")] TerritoryScheduleResult = 334, // 0x014E
+    [Token(Token = "0x40062B2")] TerritoryUpgradeWithPowerCrystalResult = 335, // 0x014F
+    [Token(Token = "0x40062B3")] ReceiveCarriableObjectStart = 336, // 0x0150
+    [Token(Token = "0x40062B4")] ReceiveCarriableObjectFinished = 337, // 0x0151
+    [Token(Token = "0x40062B5")] UpdateAccountState = 338, // 0x0152
+    [Token(Token = "0x40062B6")] StartDeterministicRoam = 339, // 0x0153
+    [Token(Token = "0x40062B7")] GuildFullAccessTagsUpdated = 340, // 0x0154
+    [Token(Token = "0x40062B8")] GuildAccessTagUpdated = 341, // 0x0155
+    [Token(Token = "0x40062B9")] GvgSeasonUpdate = 342, // 0x0156
+    [Token(Token = "0x40062BA")] GvgSeasonCheatCommand = 343, // 0x0157
+    [Token(Token = "0x40062BB")] SeasonPointsByKillingBooster = 344, // 0x0158
+    [Token(Token = "0x40062BC")] FishingStart = 345, // 0x0159
+    [Token(Token = "0x40062BD")] FishingCast = 346, // 0x015A
+    [Token(Token = "0x40062BE")] FishingCatch = 347, // 0x015B
+    [Token(Token = "0x40062BF")] FishingFinished = 348, // 0x015C
+    [Token(Token = "0x40062C0")] FishingCancel = 349, // 0x015D
+    [Token(Token = "0x40062C1")] NewFloatObject = 350, // 0x015E
+    [Token(Token = "0x40062C2")] NewFishingZoneObject = 351, // 0x015F
+    [Token(Token = "0x40062C3")] FishingMiniGame = 352, // 0x0160
+    [Token(Token = "0x40062C4")] AlbionJournalAchievementCompleted = 353, // 0x0161
+    [Token(Token = "0x40062C5")] UpdatePuppet = 354, // 0x0162
+    [Token(Token = "0x40062C6")] ChangeFlaggingFinished = 355, // 0x0163
+    [Token(Token = "0x40062C7")] NewOutpostObject = 356, // 0x0164
+    [Token(Token = "0x40062C8")] OutpostUpdate = 357, // 0x0165
+    [Token(Token = "0x40062C9")] OutpostClaimed = 358, // 0x0166
+    [Token(Token = "0x40062CA")] OverChargeEnd = 359, // 0x0167
+    [Token(Token = "0x40062CB")] OverChargeStatus = 360, // 0x0168
+    [Token(Token = "0x40062CC")] PartyFinderFullUpdate = 361, // 0x0169
+    [Token(Token = "0x40062CD")] PartyFinderUpdate = 362, // 0x016A
+    [Token(Token = "0x40062CE")] PartyFinderApplicantsUpdate = 363, // 0x016B
+    [Token(Token = "0x40062CF")] PartyFinderEquipmentSnapshot = 364, // 0x016C
+    [Token(Token = "0x40062D0")] PartyFinderJoinRequestDeclined = 365, // 0x016D
+    [Token(Token = "0x40062D1")] NewUnlockedPersonalSeasonRewards = 366, // 0x016E
+    [Token(Token = "0x40062D2")] PersonalSeasonPointsGained = 367, // 0x016F
+    [Token(Token = "0x40062D3")] PersonalSeasonPastSeasonDataEvent = 368, // 0x0170
+    [Token(Token = "0x40062D4")] EasyAntiCheatMessageToClient = 369, // 0x0171
+    [Token(Token = "0x40062D5")] MatchLootChestOpeningStart = 370, // 0x0172
+    [Token(Token = "0x40062D6")] MatchLootChestOpeningFinished = 371, // 0x0173
+    [Token(Token = "0x40062D7")] MatchLootChestOpeningCancel = 372, // 0x0174
+    [Token(Token = "0x40062D8")] NotifyCrystalMatchReward = 373, // 0x0175
+    [Token(Token = "0x40062D9")] CrystalRealmFeedback = 374, // 0x0176
+    [Token(Token = "0x40062DA")] NewLocationMarker = 375, // 0x0177
+    [Token(Token = "0x40062DB")] NewTutorialBlocker = 376, // 0x0178
+    [Token(Token = "0x40062DC")] NewTileSwitch = 377, // 0x0179
+    [Token(Token = "0x40062DD")] NewInformationProvider = 378, // 0x017A
+    [Token(Token = "0x40062DE")] NewDynamicGuildLogo = 379, // 0x017B
+    [Token(Token = "0x40062DF")] NewDecoration = 380, // 0x017C
+    [Token(Token = "0x40062E0")] TutorialUpdate = 381, // 0x017D
+    [Token(Token = "0x40062E1")] TriggerHintBox = 382, // 0x017E
+    [Token(Token = "0x40062E2")] RandomDungeonPositionInfo = 383, // 0x017F
+    [Token(Token = "0x40062E3")] NewLootChest = 384, // 0x0180
+    [Token(Token = "0x40062E4")] UpdateLootChest = 385, // 0x0181
+    [Token(Token = "0x40062E5")] LootChestOpened = 386, // 0x0182
+    [Token(Token = "0x40062E6")] UpdateLootProtectedByMobsWithMinimapDisplay = 387, // 0x0183
+    [Token(Token = "0x40062E7")] NewShrine = 388, // 0x0184
+    [Token(Token = "0x40062E8")] UpdateShrine = 389, // 0x0185
+    [Token(Token = "0x40062E9")] UpdateRoom = 390, // 0x0186
+    [Token(Token = "0x40062EA")] NewMistDungeonRoomMobSoul = 391, // 0x0187
+    [Token(Token = "0x40062EB")] NewHellgateShrine = 392, // 0x0188
+    [Token(Token = "0x40062EC")] UpdateHellgateShrine = 393, // 0x0189
+    [Token(Token = "0x40062ED")] ActivateHellgateExit = 394, // 0x018A
+    [Token(Token = "0x40062EE")] MutePlayerUpdate = 395, // 0x018B
+    [Token(Token = "0x40062EF")] ShopTileUpdate = 396, // 0x018C
+    [Token(Token = "0x40062F0")] ShopUpdate = 397, // 0x018D
+    [Token(Token = "0x40062F1")] AntiCheatKick = 398, // 0x018E
+    [Token(Token = "0x40062F2")] BattlEyeServerMessage = 399, // 0x018F
+    [Token(Token = "0x40062F3")] UnlockVanityUnlock = 400, // 0x0190
+    [Token(Token = "0x40062F4")] AvatarUnlocked = 401, // 0x0191
+    [Token(Token = "0x40062F5")] CustomizationChanged = 402, // 0x0192
+    [Token(Token = "0x40062F6")] BaseVaultInfo = 403, // 0x0193
+    [Token(Token = "0x40062F7")] GuildVaultInfo = 404, // 0x0194
+    [Token(Token = "0x40062F8")] BankVaultInfo = 405, // 0x0195
+    [Token(Token = "0x40062F9")] RecoveryVaultPlayerInfo = 406, // 0x0196
+    [Token(Token = "0x40062FA")] RecoveryVaultGuildInfo = 407, // 0x0197
+    [Token(Token = "0x40062FB")] UpdateWardrobe = 408, // 0x0198
+    [Token(Token = "0x40062FC")] CastlePhaseChanged = 409, // 0x0199
+    [Token(Token = "0x40062FD")] GuildAccountLogEvent = 410, // 0x019A
+    [Token(Token = "0x40062FE")] NewHideoutObject = 411, // 0x019B
+    [Token(Token = "0x40062FF")] NewHideoutManagement = 412, // 0x019C
+    [Token(Token = "0x4006300")] NewHideoutExit = 413, // 0x019D
+    [Token(Token = "0x4006301")] InitHideoutAttackStart = 414, // 0x019E
+    [Token(Token = "0x4006302")] InitHideoutAttackCancel = 415, // 0x019F
+    [Token(Token = "0x4006303")] InitHideoutAttackFinished = 416, // 0x01A0
+    [Token(Token = "0x4006304")] HideoutManagementUpdate = 417, // 0x01A1
+    [Token(Token = "0x4006305")] HideoutUpgradeWithPowerCrystalResult = 418, // 0x01A2
+    [Token(Token = "0x4006306")] IpChanged = 419, // 0x01A3
+    [Token(Token = "0x4006307")] SmartClusterQueueUpdateInfo = 420, // 0x01A4
+    [Token(Token = "0x4006308")] SmartClusterQueueActiveInfo = 421, // 0x01A5
+    [Token(Token = "0x4006309")] SmartClusterQueueKickWarning = 422, // 0x01A6
+    [Token(Token = "0x400630A")] SmartClusterQueueInvite = 423, // 0x01A7
+    [Token(Token = "0x400630B")] ReceivedGvgSeasonPoints = 424, // 0x01A8
+    [Token(Token = "0x400630C")] TowerPowerPointUpdate = 425, // 0x01A9
+    [Token(Token = "0x400630D")] OpenWorldAttackScheduleStart = 426, // 0x01AA
+    [Token(Token = "0x400630E")] OpenWorldAttackScheduleFinished = 427, // 0x01AB
+    [Token(Token = "0x400630F")] OpenWorldAttackScheduleCancel = 428, // 0x01AC
+    [Token(Token = "0x4006310")] OpenWorldAttackConquerStart = 429, // 0x01AD
+    [Token(Token = "0x4006311")] OpenWorldAttackConquerFinished = 430, // 0x01AE
+    [Token(Token = "0x4006312")] OpenWorldAttackConquerCancel = 431, // 0x01AF
+    [Token(Token = "0x4006313")] OpenWorldAttackConquerStatus = 432, // 0x01B0
+    [Token(Token = "0x4006314")] OpenWorldAttackStart = 433, // 0x01B1
+    [Token(Token = "0x4006315")] OpenWorldAttackEnd = 434, // 0x01B2
+    [Token(Token = "0x4006316")] NewRandomResourceBlocker = 435, // 0x01B3
+    [Token(Token = "0x4006317")] NewHomeObject = 436, // 0x01B4
+    [Token(Token = "0x4006318")] HideoutObjectUpdate = 437, // 0x01B5
+    [Token(Token = "0x4006319")] UpdateInfamy = 438, // 0x01B6
+    [Token(Token = "0x400631A")] MinimapPositionMarkers = 439, // 0x01B7
+    [Token(Token = "0x400631B")] NewTunnelExit = 440, // 0x01B8
+    [Token(Token = "0x400631C")] CorruptedDungeonUpdate = 441, // 0x01B9
+    [Token(Token = "0x400631D")] CorruptedDungeonStatus = 442, // 0x01BA
+    [Token(Token = "0x400631E")] CorruptedDungeonInfamy = 443, // 0x01BB
+    [Token(Token = "0x400631F")] HellgateRestrictedAreaUpdate = 444, // 0x01BC
+    [Token(Token = "0x4006320")] HellgateInfamy = 445, // 0x01BD
+    [Token(Token = "0x4006321")] HellgateStatus = 446, // 0x01BE
+    [Token(Token = "0x4006322")] HellgateStatusUpdate = 447, // 0x01BF
+    [Token(Token = "0x4006323")] HellgateSuspense = 448, // 0x01C0
+    [Token(Token = "0x4006324")] ReplaceSpellSlotWithMultiSpell = 449, // 0x01C1
+    [Token(Token = "0x4006325")] NewCorruptedShrine = 450, // 0x01C2
+    [Token(Token = "0x4006326")] UpdateCorruptedShrine = 451, // 0x01C3
+    [Token(Token = "0x4006327")] CorruptedShrineUsageStart = 452, // 0x01C4
+    [Token(Token = "0x4006328")] CorruptedShrineUsageCancel = 453, // 0x01C5
+    [Token(Token = "0x4006329")] ExitUsed = 454, // 0x01C6
+    [Token(Token = "0x400632A")] LinkedToObject = 455, // 0x01C7
+    [Token(Token = "0x400632B")] LinkToObjectBroken = 456, // 0x01C8
+    [Token(Token = "0x400632C")] EstimatedMarketValueUpdate = 457, // 0x01C9
+    [Token(Token = "0x400632D")] StuckCancel = 458, // 0x01CA
+    [Token(Token = "0x400632E")] DungonEscapeReady = 459, // 0x01CB
+    [Token(Token = "0x400632F")] FactionWarfareClusterState = 460, // 0x01CC
+    [Token(Token = "0x4006330")] FactionWarfareHasUnclaimedWeeklyReportsEvent = 461, // 0x01CD
+    [Token(Token = "0x4006331")] SimpleFeedback = 462, // 0x01CE
+    [Token(Token = "0x4006332")] SmartClusterQueueSkipClusterError = 463, // 0x01CF
+    [Token(Token = "0x4006333")] XignCodeEvent = 464, // 0x01D0
+    [Token(Token = "0x4006334")] BatchUseItemStart = 465, // 0x01D1
+    [Token(Token = "0x4006335")] BatchUseItemEnd = 466, // 0x01D2
+    [Token(Token = "0x4006336")] RedZoneEventClusterStatus = 467, // 0x01D3
+    [Token(Token = "0x4006337")] RedZonePlayerNotification = 468, // 0x01D4
+    [Token(Token = "0x4006338")] RedZoneWorldEvent = 469, // 0x01D5
+    [Token(Token = "0x4006339")] FactionWarfareStats = 470, // 0x01D6
+    [Token(Token = "0x400633A")] UpdateFactionBalanceFactors = 471, // 0x01D7
+    [Token(Token = "0x400633B")] FactionEnlistmentChanged = 472, // 0x01D8
+    [Token(Token = "0x400633C")] UpdateFactionRank = 473, // 0x01D9
+    [Token(Token = "0x400633D")] FactionWarfareCampaignRewardsUnlocked = 474, // 0x01DA
+    [Token(Token = "0x400633E")] FeaturedFeatureUpdate = 475, // 0x01DB
+    [Token(Token = "0x400633F")] NewCarriableObject = 476, // 0x01DC
+    [Token(Token = "0x4006340")] MinimapCrystalPositionMarker = 477, // 0x01DD
+    [Token(Token = "0x4006341")] CarriedObjectUpdate = 478, // 0x01DE
+    [Token(Token = "0x4006342")] PickupCarriableObjectStart = 479, // 0x01DF
+    [Token(Token = "0x4006343")] PickupCarriableObjectCancel = 480, // 0x01E0
+    [Token(Token = "0x4006344")] PickupCarriableObjectFinished = 481, // 0x01E1
+    [Token(Token = "0x4006345")] DoSimpleActionStart = 482, // 0x01E2
+    [Token(Token = "0x4006346")] DoSimpleActionCancel = 483, // 0x01E3
+    [Token(Token = "0x4006347")] DoSimpleActionFinished = 484, // 0x01E4
+    [Token(Token = "0x4006348")] NotifyGuestAccountVerified = 485, // 0x01E5
+    [Token(Token = "0x4006349")] MightAndFavorReceivedEvent = 486, // 0x01E6
+    [Token(Token = "0x400634A")] WeeklyPvpChallengeRewardStateUpdate = 487, // 0x01E7
+    [Token(Token = "0x400634B")] NewUnlockedPvpSeasonChallengeRewards = 488, // 0x01E8
+    [Token(Token = "0x400634C")] StaticDungeonEntrancesDungeonEventStatusUpdates = 489, // 0x01E9
+    [Token(Token = "0x400634D")] StaticDungeonDungeonValueUpdate = 490, // 0x01EA
+    [Token(Token = "0x400634E")] StaticDungeonEntranceDungeonEventsAborted = 491, // 0x01EB
+    [Token(Token = "0x400634F")] InAppPurchaseConfirmedGooglePlay = 492, // 0x01EC
+    [Token(Token = "0x4006350")] FeatureSwitchInfo = 493, // 0x01ED
+    [Token(Token = "0x4006351")] PartyJoinRequestAborted = 494, // 0x01EE
+    [Token(Token = "0x4006352")] PartyInviteAborted = 495, // 0x01EF
+    [Token(Token = "0x4006353")] PartyStartHuntRequest = 496, // 0x01F0
+    [Token(Token = "0x4006354")] PartyStartHuntRequested = 497, // 0x01F1
+    [Token(Token = "0x4006355")] PartyStartHuntRequestAnswer = 498, // 0x01F2
+    [Token(Token = "0x4006356")] PartyPlayerLeaveScheduled = 499, // 0x01F3
+    [Token(Token = "0x4006357")] GuildInviteDeclined = 500, // 0x01F4
+    [Token(Token = "0x4006358")] CancelMultiSpellSlots = 501, // 0x01F5
+    [Token(Token = "0x4006359")] NewVisualEventObject = 502, // 0x01F6
+    [Token(Token = "0x400635A")] CastleClaimProgress = 503, // 0x01F7
+    [Token(Token = "0x400635B")] CastleClaimProgressLogo = 504, // 0x01F8
+    [Token(Token = "0x400635C")] TownPortalUpdateState = 505, // 0x01F9
+    [Token(Token = "0x400635D")] TownPortalFailed = 506, // 0x01FA
+    [Token(Token = "0x400635E")] ConsumableVanityChargesAdded = 507, // 0x01FB
+    [Token(Token = "0x400635F")] FestivitiesUpdate = 508, // 0x01FC
+    [Token(Token = "0x4006360")] NewBannerObject = 509, // 0x01FD
+    [Token(Token = "0x4006361")] NewMistsImmediateReturnExit = 510, // 0x01FE
+    [Token(Token = "0x4006362")] MistsPlayerJoinedInfo = 511, // 0x01FF
+    [Token(Token = "0x4006363")] NewMistsStaticEntrance = 512, // 0x0200
+    [Token(Token = "0x4006364")] NewMistsOpenWorldExit = 513, // 0x0201
+    [Token(Token = "0x4006365")] NewTunnelExitTemp = 514, // 0x0202
+    [Token(Token = "0x4006366")] NewMistsWispSpawn = 515, // 0x0203
+    [Token(Token = "0x4006367")] MistsWispSpawnStateChange = 516, // 0x0204
+    [Token(Token = "0x4006368")] NewMistsCityEntrance = 517, // 0x0205
+    [Token(Token = "0x4006369")] NewMistsCityRoadsEntrance = 518, // 0x0206
+    [Token(Token = "0x400636A")] MistsCityRoadsEntrancePartyStateUpdate = 519, // 0x0207
+    [Token(Token = "0x400636B")] MistsCityRoadsEntranceClearStateForParty = 520, // 0x0208
+    [Token(Token = "0x400636C")] MistsEntranceDataChanged = 521, // 0x0209
+    [Token(Token = "0x400636D")] NewMistsCagedWisp = 522, // 0x020A
+    [Token(Token = "0x400636E")] MistsWispCageOpened = 523, // 0x020B
+    [Token(Token = "0x400636F")] MistsEntrancePartyBindingCreated = 524, // 0x020C
+    [Token(Token = "0x4006370")] MistsEntrancePartyBindingCleared = 525, // 0x020D
+    [Token(Token = "0x4006371")] MistsEntrancePartyBindingInfos = 526, // 0x020E
+    [Token(Token = "0x4006372")] NewMistsBorderExit = 527, // 0x020F
+    [Token(Token = "0x4006373")] NewMistsDungeonExit = 528, // 0x0210
+    [Token(Token = "0x4006374")] LocalQuestInfos = 529, // 0x0211
+    [Token(Token = "0x4006375")] LocalQuestStarted = 530, // 0x0212
+    [Token(Token = "0x4006376")] LocalQuestActive = 531, // 0x0213
+    [Token(Token = "0x4006377")] LocalQuestInactive = 532, // 0x0214
+    [Token(Token = "0x4006378")] LocalQuestProgressUpdate = 533, // 0x0215
+    [Token(Token = "0x4006379")] NewUnrestrictedPvpZone = 534, // 0x0216
+    [Token(Token = "0x400637A")] TemporaryFlaggingStatusUpdate = 535, // 0x0217
+    [Token(Token = "0x400637B")] SpellTestPerformanceUpdate = 536, // 0x0218
+    [Token(Token = "0x400637C")] Transformation = 537, // 0x0219
+    [Token(Token = "0x400637D")] TransformationEnd = 538, // 0x021A
+    [Token(Token = "0x400637E")] UpdateTrustlevel = 539, // 0x021B
+    [Token(Token = "0x400637F")] RevealHiddenTimeStamps = 540, // 0x021C
+    [Token(Token = "0x4006380")] ModifyItemTraitFinished = 541, // 0x021D
+    [Token(Token = "0x4006381")] RerollItemTraitValueFinished = 542, // 0x021E
+    [Token(Token = "0x4006382")] HuntQuestProgressInfo = 543, // 0x021F
+    [Token(Token = "0x4006383")] HuntStarted = 544, // 0x0220
+    [Token(Token = "0x4006384")] HuntFinished = 545, // 0x0221
+    [Token(Token = "0x4006385")] HuntAborted = 546, // 0x0222
+    [Token(Token = "0x4006386")] HuntMissionStepStateUpdate = 547, // 0x0223
+    [Token(Token = "0x4006387")] NewHuntTrack = 548, // 0x0224
+    [Token(Token = "0x4006388")] HuntMissionUpdate = 549, // 0x0225
+    [Token(Token = "0x4006389")] HuntQuestMissionProgressUpdate = 550, // 0x0226
+    [Token(Token = "0x400638A")] HuntTrackUsed = 551, // 0x0227
+    [Token(Token = "0x400638B")] HuntTrackUseableAgain = 552, // 0x0228
+    [Token(Token = "0x400638C")] MinimapHuntTrackMarkers = 553, // 0x0229
+    [Token(Token = "0x400638D")] NoTracksFound = 554, // 0x022A
+    [Token(Token = "0x400638E")] HuntQuestAborted = 555, // 0x022B
+    [Token(Token = "0x400638F")] InteractWithTrackStart = 556, // 0x022C
+    [Token(Token = "0x4006390")] InteractWithTrackCancel = 557, // 0x022D
+    [Token(Token = "0x4006391")] InteractWithTrackFinished = 558, // 0x022E
+    [Token(Token = "0x4006392")] NewDynamicCompound = 559, // 0x022F
+    [Token(Token = "0x4006393")] LegendaryItemDestroyed = 560, // 0x0230
+    [Token(Token = "0x4006394")] AttunementInfo = 561, // 0x0231
+    [Token(Token = "0x4006395")] TerritoryClaimRaidedRawEnergyCrystalResult = 562, // 0x0232
+    [Token(Token = "0x4006396")] CarriedObjectExpiryWarning = 563, // 0x0233
+    [Token(Token = "0x4006397")] CarriedObjectExpired = 564, // 0x0234
+    [Token(Token = "0x4006398")] TerritoryRaidStart = 565, // 0x0235
+    [Token(Token = "0x4006399")] TerritoryRaidCancel = 566, // 0x0236
+    [Token(Token = "0x400639A")] TerritoryRaidFinished = 567, // 0x0237
+    [Token(Token = "0x400639B")] TerritoryRaidResult = 568, // 0x0238
+    [Token(Token = "0x400639C")] TerritoryMonolithActiveRaidStatus = 569, // 0x0239
+    [Token(Token = "0x400639D")] TerritoryMonolithActiveRaidCancelled = 570, // 0x023A
+    [Token(Token = "0x400639E")] MonolithEnergyStorageUpdate = 571, // 0x023B
+    [Token(Token = "0x400639F")] MonolithNextScheduledOpenWorldAttackUpdate = 572, // 0x023C
+    [Token(Token = "0x40063A0")] MonolithProtectedBuildingsDamageReductionUpdate = 573, // 0x023D
+    [Token(Token = "0x40063A1")] NewBuildingBaseEvent = 574, // 0x023E
+    [Token(Token = "0x40063A2")] NewFortificationBuilding = 575, // 0x023F
+    [Token(Token = "0x40063A3")] NewCastleGateBuilding = 576, // 0x0240
+    [Token(Token = "0x40063A4")] BuildingDurabilityUpdate = 577, // 0x0241
+    [Token(Token = "0x40063A5")] MonolithFortificationPointsUpdate = 578, // 0x0242
+    [Token(Token = "0x40063A6")] FortificationBuildingUpgradeInfo = 579, // 0x0243
+    [Token(Token = "0x40063A7")] FortificationBuildingsDamageStateUpdate = 580, // 0x0244
+    [Token(Token = "0x40063A8")] SiegeNotificationEvent = 581, // 0x0245
+    [Token(Token = "0x40063A9")] UpdateEnemyWarBannerActive = 582, // 0x0246
+    [Token(Token = "0x40063AA")] TerritoryAnnouncePlayerEjection = 583, // 0x0247
+    [Token(Token = "0x40063AB")] CastleGateSwitchUseStarted = 584, // 0x0248
+    [Token(Token = "0x40063AC")] CastleGateSwitchUseFinished = 585, // 0x0249
+    [Token(Token = "0x40063AD")] FortificationBuildingWillDowngrade = 586, // 0x024A
+    [Token(Token = "0x40063AE")] BotCommand = 587, // 0x024B
+    [Token(Token = "0x40063AF")] JournalAchievementProgressUpdate = 588, // 0x024C
+    [Token(Token = "0x40063B0")] JournalClaimableRewardUpdate = 589, // 0x024D
+    [Token(Token = "0x40063B1")] KeySync = 590, // 0x024E
+    [Token(Token = "0x40063B2")] LocalQuestAreaGone = 591, // 0x024F
+    [Token(Token = "0x40063B3")] DynamicTemplate = 592, // 0x0250
+    [Token(Token = "0x40063B4")] DynamicTemplateForcedStateChange = 593, // 0x0251
+    [Token(Token = "0x40063B5")] NewOutlandsTeleportationPortal = 594, // 0x0252
+    [Token(Token = "0x40063B6")] NewOutlandsTeleportationReturnPortal = 595, // 0x0253
+    [Token(Token = "0x40063B7")] OutlandsTeleportationBindingCleared = 596, // 0x0254
+    [Token(Token = "0x40063B8")] OutlandsTeleportationReturnPortalUpdateEvent = 597, // 0x0255
+    [Token(Token = "0x40063B9")] PlayerUsedOutlandsTeleportationPortal = 598, // 0x0256
+    [Token(Token = "0x40063BA")] KillRewardedNoFame = 599, // 0x0257
   }
 }
